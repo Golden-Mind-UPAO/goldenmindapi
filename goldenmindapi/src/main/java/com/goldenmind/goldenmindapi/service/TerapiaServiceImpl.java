@@ -25,6 +25,4 @@ public class TerapiaServiceImpl implements TerapiaService{
     public void deleteTerapia(Long terapiaId) {
         terapiaRepository.deleteById(terapiaId);
     }
-
-
 }
