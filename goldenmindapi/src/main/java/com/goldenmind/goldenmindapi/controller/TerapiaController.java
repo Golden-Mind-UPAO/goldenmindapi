@@ -5,10 +5,7 @@ import com.goldenmind.goldenmindapi.service.TerapiaService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +25,10 @@ public class TerapiaController {
     public ResponseEntity<List<Terapia>> getAllTerapia()
     {
         return ResponseEntity.ok(terapiaService.getAllTerapias());
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTerapia(@PathVariable("id") Long idTerapia) {
+        terapiaService.deleteTerapia(idTerapia);
+        return ResponseEntity.noContent().build();
     }
 }

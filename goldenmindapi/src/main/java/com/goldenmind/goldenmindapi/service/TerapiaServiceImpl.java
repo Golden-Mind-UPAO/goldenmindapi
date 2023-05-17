@@ -21,4 +21,9 @@ public class TerapiaServiceImpl implements TerapiaService{
     public List<Terapia> getAllTerapias() {
         return terapiaRepository.findAll();
     }
+    @Override
+    public void deleteTerapia(Long terapiaId) {
+        terapiaRepository.deleteById(terapiaId);
+    }
+
 }
