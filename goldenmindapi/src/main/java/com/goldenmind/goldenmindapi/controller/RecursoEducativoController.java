@@ -24,4 +24,9 @@ public class RecursoEducativoController{
     public ResponseEntity<RecursoEducativo> addRecursoEducativo(@RequestBody RecursoEducativo recursoEducativo){
         return new ResponseEntity<RecursoEducativo>(recursoEducativoService.createRecursoEducativo(recursoEducativo), HttpStatus.CREATED);
     }
+    @GetMapping
+    public ResponseEntity<List<RecursoEducativo>> getAllRecursosEducativos()
+    {
+        return ResponseEntity.ok(recursoEducativoService.getAllRecursosEducativos());
+    }
 }

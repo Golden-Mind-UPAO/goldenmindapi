@@ -17,5 +17,8 @@ public class RecursoEducativoServiceImpl implements RecursoEducativoService {
     {
         return recursoEducativoRepository.save(recursoEducativo);
     }
-
+    @Override
+    public List<RecursoEducativo> getAllRecursosEducativos() {
+        return recursoEducativoRepository.findAll();
+    }
 }
