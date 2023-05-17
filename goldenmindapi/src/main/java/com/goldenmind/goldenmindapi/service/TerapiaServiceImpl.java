@@ -17,5 +17,8 @@ public class TerapiaServiceImpl implements TerapiaService{
     {
         return terapiaRepository.save(terapia);
     }
-
+    @Override
+    public List<Terapia> getAllTerapias() {
+        return terapiaRepository.findAll();
+    }
 }

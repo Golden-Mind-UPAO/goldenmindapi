@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface TerapiaService {
     Terapia createTerapia(Terapia terapia);
-
+    List<Terapia> getAllTerapias();
 }

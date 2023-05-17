@@ -24,4 +24,9 @@ public class TerapiaController {
     public ResponseEntity<Terapia> addTerapia(@RequestBody Terapia terapia){
         return new ResponseEntity<Terapia>(terapiaService.createTerapia(terapia), HttpStatus.CREATED);
     }
+    @GetMapping
+    public ResponseEntity<List<Terapia>> getAllTerapia()
+    {
+        return ResponseEntity.ok(terapiaService.getAllTerapias());
+    }
 }
