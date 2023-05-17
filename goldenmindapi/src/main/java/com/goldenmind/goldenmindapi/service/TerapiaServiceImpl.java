@@ -26,4 +26,5 @@ public class TerapiaServiceImpl implements TerapiaService{
         terapiaRepository.deleteById(terapiaId);
     }
 
+
 }

@@ -21,4 +21,8 @@ public class RecursoEducativoServiceImpl implements RecursoEducativoService {
     public List<RecursoEducativo> getAllRecursosEducativos() {
         return recursoEducativoRepository.findAll();
     }
+    @Override
+    public void deleteRecursoEducativo(Long recursoeducativoId) {
+        recursoEducativoRepository.deleteById(recursoeducativoId);
+    }
 }
