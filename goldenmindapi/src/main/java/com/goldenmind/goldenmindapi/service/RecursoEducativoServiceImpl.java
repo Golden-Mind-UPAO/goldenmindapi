@@ -25,4 +25,17 @@ public class RecursoEducativoServiceImpl implements RecursoEducativoService {
     public void deleteRecursoEducativo(Long recursoeducativoId) {
         recursoEducativoRepository.deleteById(recursoeducativoId);
     }
+    @Override
+    public RecursoEducativo updateRecursoEducativo(Long id, RecursoEducativo recursoEducativo) {
+        RecursoEducativo existingRecursoEducativo = recursoEducativoRepository.findById(id).orElse(null);
+        if (existingRecursoEducativo != null) {
+            existingRecursoEducativo.setNombreRecurso(recursoEducativo.getNombreRecurso());
+            existingRecursoEducativo.setTipoRecurso(recursoEducativo.getTipoRecurso());
+            existingRecursoEducativo.setAutor(recursoEducativo.getAutor());
+            existingRecursoEducativo.setDetalleRecurso(recursoEducativo.getDetalleRecurso());
+            return recursoEducativoRepository.save(existingRecursoEducativo);
+        } else {
+            return null;
+        }
+    }
 }

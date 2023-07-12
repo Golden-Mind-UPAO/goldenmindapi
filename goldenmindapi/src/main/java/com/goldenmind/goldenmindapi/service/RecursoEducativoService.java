@@ -8,4 +8,7 @@ public interface RecursoEducativoService {
     RecursoEducativo createRecursoEducativo(RecursoEducativo recursoEducativo);
     List<RecursoEducativo> getAllRecursosEducativos();
     void deleteRecursoEducativo(Long recursoeducativoId);
+
+    RecursoEducativo updateRecursoEducativo(Long id, RecursoEducativo recursoEducativo);
+
 }

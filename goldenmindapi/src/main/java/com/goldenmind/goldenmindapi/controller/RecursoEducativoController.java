@@ -31,4 +31,13 @@ public class RecursoEducativoController{
         recursoEducativoService.deleteRecursoEducativo(idRecursoEducativo);
         return ResponseEntity.noContent().build();
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<RecursoEducativo> updateRecursoEducativo(@PathVariable("id") Long id, @RequestBody RecursoEducativo recursoEducativo) {
+        RecursoEducativo updatedRecursoEducativo = recursoEducativoService.updateRecursoEducativo(id, recursoEducativo);
+        if (updatedRecursoEducativo != null) {
+            return ResponseEntity.ok(updatedRecursoEducativo);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
