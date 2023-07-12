@@ -4,7 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PsicologosModule } from './psicologos/psicologos.module';
+import { PagesModule } from './pages/pages.module';
+import { AuthModule } from './auth/auth.module';
+
+
 
 @NgModule({
   declarations: [
@@ -14,8 +20,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
-  ],
+    NgbModule,
+    PagesModule,
+    PsicologosModule,
+    AuthModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

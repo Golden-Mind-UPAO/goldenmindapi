@@ -5,6 +5,11 @@ import { PsicologosListComponent } from './psicologos-list/psicologos-list.compo
 import { PsicologosDetailsComponent } from './psicologos-details/psicologos-details.component';
 import { PsicologosEditComponent } from './psicologos-edit/psicologos-edit.component';
 import { PsicologosRoutingModule } from './psicologos-routing.module';
+import {MatInputModule} from '@angular/material/input' ;
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatButtonModule} from '@angular/material/button' ;
 
 
 
@@ -17,7 +22,12 @@ import { PsicologosRoutingModule } from './psicologos-routing.module';
   ],
   imports: [
     CommonModule,
-    PsicologosRoutingModule
+    PsicologosRoutingModule,
+    MatInputModule,
+    MatGridListModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatButtonModule  
   ]
 })
 export class PsicologosModule { }

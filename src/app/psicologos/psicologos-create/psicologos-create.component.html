@@ -1,1 +1,60 @@
-<p>psicologos-create works!</p>
+<mat-label>Crear Estudiante</mat-label>
+<hr>
+
+<form class="example-form">
+    <mat-grid-list cols="5" rowHeigh="4:1">
+        <mat-grid-tile>
+            <mat-form-field class= "example-full-width">
+                <mat-label>Nombre completo</mat-label>
+                <input matInput placeholder="Henry Mendoza Puerta">
+            </mat-form-field>            
+        </mat-grid-tile>
+
+        <mat-grid-tile class="example-full-width">
+                <mat-form-field class= "example-full-width">
+                <mat-label>Nombre usuario</mat-label>
+                <input matInput placeholder="HenryMP">
+            </mat-form-field>  
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <mat-form-field class= "example-full-width">
+                <mat-label>Correo</mat-label>
+                <input matInput placeholder="demo@hotmail.com">
+            </mat-form-field> 
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <mat-form-field class= "example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password">
+            </mat-form-field> 
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <label class="form-label" style="font-size: 14px; color: black; margin-left: 15px">Fecha de Nacimiento</label>
+            <input type="date"
+            placeholder="Datepicker"
+            >
+        </mat-grid-tile> 
+
+
+        <mat-grid-tile>
+            <mat-radio-group aria-label="Selecciona tu genero"> 
+                <mat-radio-button value="Masculino">Masculino</mat-radio-button> 
+                <mat-radio-button value="Femenino">Femenino</mat-radio-button>
+            </mat-radio-group>
+        </mat-grid-tile> 
+
+        <mat-grid-tile>
+            <mat-form-field class= "example-full-width">
+                <mat-label>Telefono</mat-label>
+                <input matInput placeholder="971-005-777">
+            </mat-form-field> 
+        </mat-grid-tile> 
+        </mat-grid-list>
+
+        <button mat-raised-button type="submit" color="primary">Añadir Psicologo</button>
+
+    
+    </form>
