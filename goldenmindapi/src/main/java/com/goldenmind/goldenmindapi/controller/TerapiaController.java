@@ -31,4 +31,14 @@ public class TerapiaController {
         terapiaService.deleteTerapia(idTerapia);
         return ResponseEntity.noContent().build();
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Terapia> updateTerapia(@PathVariable("id") Long id, @RequestBody Terapia terapia) {
+        Terapia updatedTerapia = terapiaService.updateTerapia(id, terapia);
+        if (updatedTerapia != null) {
+            return ResponseEntity.ok(updatedTerapia);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
